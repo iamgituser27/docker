@@ -1,0 +1,16 @@
+pipeline:
+  javaBuild:
+    image: maven
+    commands:
+      - mvn clean
+      - mvn install
+
+  dockerize:
+    image: plugins/docker
+    repo: jbeginsamuel/demo-app
+    username: jbeginsamuel
+    password: Spurgen1981$
+    tags: ver2
+#    commands:
+#      - docker build  .
+#      - docker images
